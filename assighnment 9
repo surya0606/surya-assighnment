@@ -1,0 +1,84 @@
+#python progrmm to print prime first and non prime#
+
+list=[]
+lista=[]
+listb=[]
+n=int(input("enter no of numbers in an array"))
+for i in range(n):
+    a=int(input("enter a number one by one"))
+    list.append(a)
+print("the list is", list)
+for j in list:
+        if(j==2):
+            lista.append(j)
+        else:
+            for k in range(2,j):
+                if (j%k==0):
+                    listb.append(j)
+                    break
+            else:
+               lista.append(j)
+print("the prime number array is", lista) 
+print("the non-prime number array is ",listb)
+print(lista+listb)
+
+
+
+
+
+#python programm to find missing number#
+
+list=[]
+n=int(input("enter no of numbers in an array ")) 
+for i in range(n):
+    a=int(input (" Enter number one by one "))
+    list.append(a)
+print(list)
+b=n+1
+c=b*(b+1)/2
+d=0
+for j in list:
+    d=d+j
+dif=c-d        
+print(" The missing number  is", dif)
+
+
+
+
+#python prograam to find winner and runner#
+
+
+list=[]
+n=int(input ("enter no of scores  ")) 
+for i in range(n):
+  a=int(input (" scores")) 
+  list.append(a) 
+print("given list is",list) 
+list.sort()
+print (" sorted list ", list) 
+print(" winner score ", list[-1]) 
+print(" runner score " , list[-2])
+
+
+
+#python  programm to find absolute difference#
+
+
+list=[]
+list1=[]
+n=int(input("enter no of numbers in list")) 
+b=0
+for i in range(n):
+  a=int(input("enter numbers :")) 
+  list.append(a) 
+print("given list is",list) 
+list.sort() 
+print(" sorted list is", list) 
+for i in range(1,n):
+   c=abs(list[i-1]-list[i]) 
+   list1.append(c) 
+print(" absolute difference is",list1) 
+for j in list1:
+  b=b+j
+print(" sum of absolute difference is", b)
+
